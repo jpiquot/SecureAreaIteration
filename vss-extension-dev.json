@@ -1,0 +1,81 @@
+{
+  "manifestVersion": 1,
+  "id": "SecureAreaAndIteration-dev",
+  "public": false,
+  "baseUri": "https://localhost:3000",
+  "version": "1.2.0",
+  "name": "Secure area and iteration (preview)",
+  "publisher": "Fiveforty",
+  "description": "Denies changes on the area and iteration fields for users not in the AreaUpdate and IterationUpdate groups.",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "demands": ["api-version/5.2"],
+  "icons": {
+    "default": "static/fiveforty.png"
+  },
+  "content": {
+    "details": {
+      "path": "content_details.md"
+    }
+  },
+  "categories": ["Azure Boards"],
+  "scopes": [
+    "vso.work"
+  ],
+  "contributions": [
+    {
+      "id": "secure-area-iteration",
+      "type": "ms.vss-work-web.work-item-notifications",
+      "description": "Secures the area and iteration fields. Only allowed users can change the values.",
+      "targets": ["ms.vss-work-web.work-item-form"],
+      "properties": {
+        "name": "Secured Area and Iteration",
+        "uri": "static/app.html"
+      }
+	},
+	{
+		"id": "secure-area-iteration-settings",
+		"type": "ms.vss-web.hub",
+		"targets": ["ms.vss-web.project-admin-hub-group"],
+		"includes": [
+		  "ms.vss-tfs-web.tfs-page-data-service",
+		  "ms.vss-features.host-navigation-service",
+		  "ms.vss-features.extension-data-service",
+		  "ms.vss-features.host-dialog-service"
+		],
+		"properties": {
+		  "name": "Secure Area Iteration",
+		  "uri": "static/settings.html",
+		  "icon": "static/fiveforty.png",
+		  "supportsMobile": true
+		}
+	  }
+  ],
+  "files": [
+    {
+      "path": "dist",
+      "addressable": true
+    },
+    {
+      "path": "static",
+      "addressable": true
+    }
+  ],
+  "links":{
+    "support": {
+      "uri": "mailto:jpiquot@fiveforty.fr"
+    }
+  },
+  "tags": [
+    "Iteration",
+    "Area",
+    "Security"
+  ],
+  "repository": {
+    "type": "git",
+    "uri": "https://fiveforty@dev.azure.com/fiveforty/DevOps/_git/DevOpsExt"
+  }
+}

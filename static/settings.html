@@ -1,0 +1,54 @@
+<script type="text/javascript"
+		src="../dist/settings.js"
+		charset="utf-8">
+</script>
+<div class="absolute-fill flex-column secure-area-iteration">
+	<div class="secure-area-iteration-title">Secure Area and Iteration</div>
+	<div class="secure-area-iteration-content">
+		<div id="root" style="width: 100%"></div>
+		<div id="secure-area-iteration-form">
+			<div class="secure-team-field">
+				<label class="secure-team-field-label" for="area-update-team">Area update team</label>
+				<input class="secure-team-field-input"
+					   id="area-update-team"
+					   name="area-update-team" />
+				<span class="secure-team-field-description">
+					The team authorized to update area field. If not defined
+					everyone can edit the field.
+				</span>
+			</div>
+			<div class="secure-team-field">
+				<label class="secure-team-field-label" for="area-update-team">Area default value</label>
+				<input class="secure-team-field-input"
+					   id="area-default"
+					   name="area-default" />
+				<span class="secure-team-field-description">
+					The area default value when creating new work items.
+				</span>
+			</div>
+			<div class="secure-team-field">
+				<label class="secure-team-field-label" for="iteration-update-team">Iteration update team</label>
+				<input class="secure-team-field-input"
+					   id="iteration-update-team"
+					   name="iteration-update-team" />
+				<span class="secure-team-field-description">
+					The team authorized to update iteration field. If not defined
+					everyone can edit the field.
+				</span>
+			</div>
+			<div class="secure-team-field">
+				<label class="secure-team-field-label" for="iteration-update-team">Iteration default value</label>
+				<input class="secure-team-field-input"
+					   id="iteration-default"
+					   name="iteration-default" />
+				<span class="secure-team-field-description">
+					The iteration default value when creating new work items.
+				</span>
+			</div>
+			<button id="secure-area-iteration-button" class="ms-Button ms-Button--primary">
+				<span class="ms-Button-label">Save</span>
+			</button>
+		</div>
+	</div>
+</div>
+
