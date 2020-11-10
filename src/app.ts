@@ -97,7 +97,7 @@ class program {
                 onUnloaded: async (unloadedEventArgs: IWorkItemChangedArgs): Promise<void> => await securedFielService.onUnloaded(unloadedEventArgs)
             }
         });
-        SDK.notifyLoadSucceeded();
+        await SDK.notifyLoadSucceeded();
     }
     private static async isTeamMember(client: CoreRestClient, userId: string, projectId: string, teamId: string): Promise<boolean> {
         const list: TeamMember[] = await client.getTeamMembersWithExtendedProperties(projectId, teamId);
